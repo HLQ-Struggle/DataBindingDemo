@@ -9,8 +9,18 @@ import android.view.View;
 import com.hlq.databindingdemo.activity.BasisUsageActivity;
 import com.hlq.databindingdemo.activity.BindListenerActivity;
 import com.hlq.databindingdemo.activity.ExpressionActivity;
+import com.hlq.databindingdemo.activity.IncludeActivity;
+import com.hlq.databindingdemo.activity.ObservableActivity;
+import com.hlq.databindingdemo.activity.ViewStubActivity;
 import com.hlq.databindingdemo.databinding.ActivityMainBinding;
 
+/**
+ * author : HLQ
+ * e-mail : 925954424@qq.com
+ * time   : 2018/02/22
+ * desc   : 首页导航
+ * version: 1.0
+ */
 public class MainActivity extends AppCompatActivity {
 
     private MainActivity selfActivity = MainActivity.this;
@@ -22,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mainDataBinding =
                 DataBindingUtil.setContentView(this, R.layout.activity_main);
-        mainDataBinding.setPersenter(new Persenter());
+        mainDataBinding.setPersenter(new Presenter());
     }
 
     // 方法引用 必须使用listener本身的格式
-    public class Persenter {
+    public class Presenter {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.bindData: // 数据绑定
@@ -37,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.useExpression: // 表达式
                     startActivity(new Intent(selfActivity, ExpressionActivity.class));
+                    break;
+                case R.id.useViewStub: // ViewStub Study
+                    startActivity(new Intent(selfActivity, ViewStubActivity.class));
+                    break;
+                case R.id.useInclude: // include Study
+                    startActivity(new Intent(selfActivity, IncludeActivity.class));
+                    break;
+                case R.id.updateData: // 数据更新
+                    startActivity(new Intent(selfActivity, ObservableActivity.class));
                     break;
             }
         }

@@ -9,7 +9,7 @@
 
         <variable
             name="persenter"
-            type="com.hlq.databindingdemo.activity.BindListenerActivity.Persenter" />
+            type="com.hlq.databindingdemo.activity.BindListenerActivity.Presenter" />
     </data>
 
     <android.support.v7.widget.LinearLayoutCompat xmlns:tools="http://schemas.android.com/tools"
@@ -23,7 +23,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{persenter.onClick}"
-            android:text="测试监听器绑定" />
+            android:text="测试监听器绑定." />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{persenter::onClick}"
+            android:text="测试监听器绑定:" />
 
         <Button
             android:layout_width="match_parent"

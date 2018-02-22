@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.hlq.databindingdemo.activity.ExpressionActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-</android.support.constraint.ConstraintLayout>
+    <data>
+
+        <variable
+            name="user"
+            type="com.hlq.databindingdemo.bean.UserBean" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.hlq.databindingdemo.activity.ExpressionActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/contentStyle"
+                android:text="一起来探表达式" />
+
+            <TextView
+                style="@style/titleStyle"
+                android:text="模拟数据：姓名：贺大大 年龄：22 地址：河北 个数：0" />
+
+            <TextView
+                style="@style/titleStyle"
+                android:text="一、三元运算符(用户名不等于空则正常显示，反之显示贺大宝)" />
+
+            <TextView
+                style="@style/contentStyle"
+                android:text='@{user.userName!=null?user.userName:"贺大宝"}' />
+
+            <TextView
+                style="@style/titleStyle"
+                android:text="二、三元运算符替代者(相比第一条，简单省事儿)" />
+
+            <TextView
+                style="@style/contentStyle"
+                android:text='@{user.userName??"贺大宝"}' />
+
+            <TextView
+                style="@style/titleStyle"
+                android:text="三、比较（例如比较个数等于0显示反之隐藏）" />
+
+            <TextView
+                style="@style/contentStyle"
+                android:text="看看我是被隐藏还是显示呢"
+                android:visibility="@{user.userCount==0?view.VISIBLE:view.GONE}" />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

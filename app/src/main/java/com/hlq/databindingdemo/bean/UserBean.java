@@ -12,11 +12,27 @@ public class UserBean {
     private String userName;
     private String userAge;
     private String userAddress;
+    private int userCount;
 
     public UserBean(String userName, String userAge, String userAddress) {
         this.userName = userName;
         this.userAge = userAge;
         this.userAddress = userAddress;
+    }
+
+    public UserBean(String userName, String userAge, String userAddress, int userCount) {
+        this.userName = userName;
+        this.userAge = userAge;
+        this.userAddress = userAddress;
+        this.userCount = userCount;
+    }
+
+    public int getUserCount() {
+        return userCount;
+    }
+
+    public void setUserCount(int userCount) {
+        this.userCount = userCount;
     }
 
     public String getUserName() {

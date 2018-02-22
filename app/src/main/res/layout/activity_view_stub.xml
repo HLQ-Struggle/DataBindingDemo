@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.hlq.databindingdemo.activity.ViewStubActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.hlq.databindingdemo.activity.ViewStubActivity">
+
+        <TextView
+            style="@style/contentStyle"
+            android:text="ViewStub示例" />
+
+        <ViewStub
+            android:id="@+id/viewStub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_view_stub" />
+
+    </LinearLayout>
+</layout>

@@ -28,13 +28,13 @@ public class BindListenerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mBindListenerBinding =
                 DataBindingUtil.setContentView(this, R.layout.activity_bind_listener);
-        mBindListenerBinding.setPersenter(new Persenter());
+        mBindListenerBinding.setPersenter(new Presenter());
 //        mBindListenerBinding.setVariable(BR.persenter,new Persenter());
 
         mBindListenerBinding.setUser(new UserBean("贺大大", "22", "China"));
     }
 
-    public class Persenter {
+    public class Presenter {
         public void onClick(View view) {
             Toast.makeText(selfActivity, "点到了哦~", Toast.LENGTH_SHORT).show();
         }

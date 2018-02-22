@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="classX"
+            type="com.hlq.databindingdemo.bean.ClassBean" />
+
+        <variable
+            name="love"
+            type="com.hlq.databindingdemo.bean.LoveBean" />
+
+        <variable
+            name="presenter"
+            type="com.hlq.databindingdemo.activity.ObservableActivity.Presenter" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.hlq.databindingdemo.activity.ObservableActivity">
+
+        <EditText
+            style="@style/titleStyle"
+            android:onTextChanged="@{presenter.onTextChanged}" />
+
+        <TextView
+            style="@style/contentStyle"
+            android:text="展示数据更新-notifyPropertyChanged" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text="@{classX.classNo}" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text="@{classX.classNum}" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text="@{classX.className}" />
+
+        <TextView
+            style="@style/contentStyle"
+            android:text="展示数据更新-notifyChange" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text="@{love.youSelf}" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text="@{love.mySelf}" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text='@{love.isTrueLove?"true":"false"}' />
+    </LinearLayout>
+</layout>
