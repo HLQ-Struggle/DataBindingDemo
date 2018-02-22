@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.hlq.databindingdemo.bean.UserBean" />
+
+        <variable
+            name="persenter"
+            type="com.hlq.databindingdemo.activity.BindListenerActivity.Persenter" />
+    </data>
+
+    <android.support.v7.widget.LinearLayoutCompat xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        tools:context="com.hlq.databindingdemo.activity.BindListenerActivity">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{persenter.onClick}"
+            android:text="测试监听器绑定" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> persenter.getUserClick()}"
+            android:text="测试方法绑定" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> persenter.showUserName(user)}"
+            android:text="测试方法绑定传值" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</layout>

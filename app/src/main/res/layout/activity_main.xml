@@ -1,35 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:overScrollMode="never"
-    android:scrollbars="none">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="persenter"
+            type="com.hlq.databindingdemo.MainActivity.Persenter" />
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="15dp"
-        tools:context="com.hlq.databindingdemo.MainActivity">
+        android:overScrollMode="never"
+        android:scrollbars="none">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="本demo诣在通过简单例子逐步讲解有关Data binding的使用，希望阅读完的小伙伴可以对Data binding这个神器逐步上手，从而更好的应用实际项目中~\n当然如果觉得LZ写的还不错，不妨关注LZ微信公众号，虽然目前没有太多时间去整理，去维护，甚至关于公众号好多内容都不了解~" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+            tools:context="com.hlq.databindingdemo.MainActivity">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/hlq_gzh" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本demo诣在通过简单例子逐步讲解有关Data Binding的使用，希望阅读完的小伙伴可以对Data Binding这个神器逐步上手，从而更好的应用实际项目中~\n当然如果觉得LZ写的还不错，不妨关注LZ微信公众号，虽然目前没有太多时间去整理，去维护，甚至关于公众号好多内容都不了解~\n现在公众号卡在代码格式显示，希望有经验的伙计指点一二~Thanks~" />
 
-        <Button android:id="@+id/id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="基本用法" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/hlq_gzh" />
 
-    </LinearLayout>
-</ScrollView>
+            <Button
+                android:id="@+id/bindData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="@{persenter.onClick}"
+                android:text="基本用法-数据绑定" />
+
+            <Button
+                android:id="@+id/bingListener"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="@{persenter.onClick}"
+                android:text="基本用法-设置事件" />
+
+            <Button
+                android:id="@+id/useExpression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="@{persenter.onClick}"
+                android:text="基本用法-表达式的使用" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
