@@ -13,6 +13,20 @@ import com.hlq.databindingdemo.databinding.ActivityExpressionBinding;
  * e-mail : 925954424@qq.com
  * time   : 2018/02/21
  * desc   : Data Binding 表达式 Study
+ * 数学 + - / * %
+ 字符串连接 +
+ 逻辑 && ||
+ 二进制 & | ^
+ 一元运算 + - ! ~
+ 移位 >> >>> <<
+ 比较 == > < >= <=
+ instanceof
+ 分组 ()
+ null
+ Cast
+ 方法调用
+ 数据访问 []
+ 三元运算 ?:
  * version: 1.0
  */
 public class ExpressionActivity extends AppCompatActivity {

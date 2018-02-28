@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="love"
+            type="com.hlq.databindingdemo.bean.LoveBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_launcher_round" />
+
+        <TextView
+            style="@style/contentStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/icon"
+            android:text="@{love.youSelf}"
+            tools:text="姓名" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/icon"
+            android:background="#fff" />
+
+    </RelativeLayout>
+</layout>

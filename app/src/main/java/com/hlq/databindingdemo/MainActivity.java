@@ -11,6 +11,7 @@ import com.hlq.databindingdemo.activity.BindListenerActivity;
 import com.hlq.databindingdemo.activity.ExpressionActivity;
 import com.hlq.databindingdemo.activity.IncludeActivity;
 import com.hlq.databindingdemo.activity.ObservableActivity;
+import com.hlq.databindingdemo.activity.RecyclerViewActivity;
 import com.hlq.databindingdemo.activity.ViewStubActivity;
 import com.hlq.databindingdemo.databinding.ActivityMainBinding;
 
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.updateData: // 数据更新
                     startActivity(new Intent(selfActivity, ObservableActivity.class));
+                    break;
+                case R.id.showLoveHistory: // 展示RecyclerView如何使用DataBinding
+                    startActivity(new Intent(selfActivity, RecyclerViewActivity.class));
                     break;
             }
         }

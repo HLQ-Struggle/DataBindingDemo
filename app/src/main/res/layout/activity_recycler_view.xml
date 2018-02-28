@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.hlq.databindingdemo.bean.LoveBean" />
+
+        <import type="android.databinding.ObservableArrayList" />
+
+        <variable
+            name="loveList"
+            type="ObservableArrayList&lt;LoveBean>" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.hlq.databindingdemo.activity.RecyclerViewActivity">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/showLove"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:data="@{loveList}" />
+
+    </LinearLayout>
+</layout>
