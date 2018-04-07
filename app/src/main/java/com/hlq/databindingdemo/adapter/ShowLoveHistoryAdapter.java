@@ -17,7 +17,7 @@ import java.util.List;
  * author : HLQ
  * e-mail : 925954424@qq.com
  * time   : 2018/02/24
- * desc   :
+ * desc   : RecyclerView与DataBinding使用
  * version: 1.0
  */
 public class ShowLoveHistoryAdapter extends RecyclerView.Adapter<ShowLoveHistoryHolder> {
@@ -42,7 +42,7 @@ public class ShowLoveHistoryAdapter extends RecyclerView.Adapter<ShowLoveHistory
     @Override
     public void onBindViewHolder(ShowLoveHistoryHolder holder, int position) {
         holder.getBinding().setLove(mLoveList.get(position));
-        //
+        // 立即刷新界面，防止列表更新不及时，导致数据错乱
         holder.getBinding().executePendingBindings();
     }
 

@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.showLoveHistory: // 展示RecyclerView如何使用DataBinding
                     startActivity(new Intent(selfActivity, RecyclerViewActivity.class));
                     break;
+                case R.id.showLoveHistoryOnClick: // 展示RecyclerView添加点击事件
+                    startActivity(new Intent(selfActivity, RecyclerViewActivity.class));
+                    break;
             }
         }
     }
