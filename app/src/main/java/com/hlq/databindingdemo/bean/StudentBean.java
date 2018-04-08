@@ -13,6 +13,13 @@ public class StudentBean {
     private int stuAge;
     private boolean stuIsPer;
 
+    public StudentBean() {
+    }
+
+    public StudentBean(String stuName) {
+        this.stuName = stuName;
+    }
+
     public boolean isStuIsPer() {
         return stuIsPer;
     }
@@ -27,13 +34,6 @@ public class StudentBean {
 
     public void setStuAge(int stuAge) {
         this.stuAge = stuAge;
-    }
-
-    public StudentBean() {
-    }
-
-    public StudentBean(String stuName) {
-        this.stuName = stuName;
     }
 
     public String getStuName() {

@@ -6,6 +6,10 @@
         <variable
             name="user"
             type="com.hlq.databindingdemo.bean.UserBean" />
+
+        <variable
+            name="bean"
+            type="com.hlq.databindingdemo.bean.ClassBean" />
     </data>
 
     <LinearLayout
@@ -24,5 +28,9 @@
         <TextView
             style="@style/titleStyle"
             android:text='@{"地址："+user.userAddress}' />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text='@{"测试："+bean.className}' />
     </LinearLayout>
 </layout>

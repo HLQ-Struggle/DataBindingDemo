@@ -8,6 +8,10 @@
         <variable
             name="user"
             type="com.hlq.databindingdemo.bean.UserBean" />
+
+        <variable
+            name="bean"
+            type="com.hlq.databindingdemo.bean.ClassBean" />
     </data>
 
     <LinearLayout
@@ -22,7 +26,8 @@
 
         <include
             layout="@layout/include_item_layout"
-            bind:user="@{user}"/>
+            bind:user="@{user}"
+            bind:bean="@{bean}"/>
 
     </LinearLayout>
 </layout>

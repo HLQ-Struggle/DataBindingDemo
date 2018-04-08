@@ -18,6 +18,10 @@ public class ClassBean extends BaseObservable {
     private String classNum;
     private String className;
 
+    public ClassBean(String className) {
+        this.className = className;
+    }
+
     public ClassBean(String className, String classNum) {
         this.className = className;
         this.classNum = classNum;

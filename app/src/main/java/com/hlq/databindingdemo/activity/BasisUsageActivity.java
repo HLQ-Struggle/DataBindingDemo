@@ -17,8 +17,10 @@ public class BasisUsageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 实例化布局 初始化Binding
         ActivityBasisUsageBinding basisUsageBinding =
                 DataBindingUtil.setContentView(this, R.layout.activity_basis_usage);
+        // 设置值
         basisUsageBinding.userName.setText("静心Study");
         basisUsageBinding.userAge.setText("22");
         basisUsageBinding.userAddress.setText("大好河山，张家口");

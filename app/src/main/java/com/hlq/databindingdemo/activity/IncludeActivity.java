@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.hlq.databindingdemo.R;
+import com.hlq.databindingdemo.bean.ClassBean;
 import com.hlq.databindingdemo.bean.UserBean;
 import com.hlq.databindingdemo.databinding.ActivityIncludeBinding;
 
@@ -23,5 +24,6 @@ public class IncludeActivity extends AppCompatActivity {
         ActivityIncludeBinding binding =
                 DataBindingUtil.setContentView(this, R.layout.activity_include);
         binding.setUser(new UserBean("静心Study", "22", "帝都"));
+        binding.setBean(new ClassBean("哇哈哈"));
     }
 }
