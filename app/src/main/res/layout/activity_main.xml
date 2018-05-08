@@ -82,7 +82,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:onClick="@{persenter.onClick}"
-                android:text="基本用法-数据更新"
+                android:text="进阶用法-数据更新"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/observableFieldStudy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="@{persenter.onClick}"
+                android:text="进阶用法-Observable Field Study"
                 android:textAllCaps="false" />
 
             <Button
@@ -91,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:onClick="@{persenter.onClick}"
-                android:text="基本用法-RecyclerView"
+                android:text="进阶用法-RecyclerView"
                 android:textAllCaps="false" />
 
             <Button

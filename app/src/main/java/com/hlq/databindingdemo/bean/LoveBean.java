@@ -7,7 +7,7 @@ import android.databinding.ObservableBoolean;
  * author : HLQ
  * e-mail : 925954424@qq.com
  * time   : 2018/02/22
- * desc   :
+ * desc   : notifyChange 更新所有数据
  * version: 1.0
  */
 public class LoveBean extends BaseObservable {

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.databinding.ObservableArrayList" />
+
+        <variable
+            name="loveList"
+            type="ObservableArrayList&lt;String>" />
+
+        <import type="android.databinding.ObservableMap" />
+
+        <variable
+            name="loveMap"
+            type="ObservableMap&lt;String,String>" />
+
+        <variable
+            name="filedBean"
+            type="com.hlq.databindingdemo.bean.ObservableFieldBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.ObservableFieldActivity">
+
+        <TextView
+            style="@style/contentStyle"
+            android:text="Observable Field" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text="@{filedBean.filedName}" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text='@{"年纪："+filedBean.fileAge}' />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text='@{"结果为："+filedBean.fileStore}' />
+
+        <TextView
+            style="@style/contentStyle"
+            android:text="ObservableArrayList Study" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text="@{loveList.get(0)}" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text="@{loveList.get(1)}" />
+
+        <TextView
+            style="@style/contentStyle"
+            android:text="ObservableArrayMap Study" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text='@{loveMap["name"]}' />
+
+        <TextView
+            style="@style/titleStyle"
+            android:text='@{loveMap["age"]}' />
+
+    </LinearLayout>
+</layout>

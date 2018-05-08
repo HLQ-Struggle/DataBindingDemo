@@ -20,7 +20,8 @@
         <activity android:name=".activity.ViewStubActivity" />
         <activity android:name=".activity.IncludeActivity" />
         <activity android:name=".activity.ObservableActivity" />
-        <activity android:name=".activity.RecyclerViewActivity"></activity>
+        <activity android:name=".activity.RecyclerViewActivity" />
+        <activity android:name=".activity.ObservableFieldActivity"></activity>
     </application>
 
 </manifest>

@@ -6,7 +6,7 @@ import android.databinding.ObservableField;
  * author : HLQ
  * e-mail : 925954424@qq.com
  * time   : 2018/02/23
- * desc   :
+ * desc   : ObservableField 首战
  * version: 1.0
  */
 public class MissBean {

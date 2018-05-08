@@ -4,18 +4,6 @@
 
     <data>
 
-        <import type="android.databinding.ObservableArrayList" />
-
-        <variable
-            name="loveList"
-            type="ObservableArrayList&lt;String>" />
-
-        <import type="android.databinding.ObservableMap" />
-
-        <variable
-            name="loveMap"
-            type="ObservableMap&lt;String,String>" />
-
         <variable
             name="classX"
             type="com.hlq.databindingdemo.bean.ClassBean" />
@@ -85,31 +73,14 @@
 
             <TextView
                 style="@style/contentStyle"
-                android:text="ObservableArrayList Study" />
-
-            <TextView
-                style="@style/titleStyle"
-                android:text="@{loveList.get(0)}" />
-
-            <TextView
-                style="@style/titleStyle"
-                android:text="@{loveList.get(1)}" />
-
-            <TextView
-                style="@style/contentStyle"
-                android:text="ObservableArrayMap Study" />
-
-            <TextView
-                style="@style/titleStyle"
-                android:text='@{loveMap["name"]}' />
-
-            <TextView
-                style="@style/titleStyle"
-                android:text='@{loveMap["age"]}' />
-
-            <TextView
-                style="@style/contentStyle"
                 android:text="ObservableField Study" />
+
+            <Button
+                android:id="@+id/btnChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change"
+                android:textAllCaps="false" />
 
             <TextView
                 style="@style/titleStyle"

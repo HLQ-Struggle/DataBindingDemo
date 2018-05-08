@@ -1,11 +1,9 @@
 package com.hlq.databindingdemo.activity;
 
 import android.databinding.DataBindingUtil;
-import android.databinding.ObservableArrayList;
-import android.databinding.ObservableArrayMap;
-import android.databinding.ObservableMap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.hlq.databindingdemo.R;
 import com.hlq.databindingdemo.bean.ClassBean;
@@ -27,6 +25,8 @@ public class ObservableActivity extends AppCompatActivity {
     private ClassBean mClassBean = new ClassBean("001", "100", "A1T105");
     private LoveBean mLoveBean = new LoveBean("Who are you", "H.L.Q.", true);
 
+    private MissBean mMissBean;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,19 +35,19 @@ public class ObservableActivity extends AppCompatActivity {
         mBinding.setLove(mLoveBean);
         mBinding.setPresenter(new Presenter());
 
-        ObservableArrayList testList = new ObservableArrayList();
-        testList.add("我是第一条数据");
-        testList.add("我是第二条数据");
-        mBinding.setLoveList(testList);
+        mMissBean = new MissBean();
+        mMissBean.missWho.set("在思念谁？");
+        mMissBean.missYou.set("在思念你~");
+        mBinding.setMissBean(mMissBean);
 
-        ObservableMap<String, String> testMap = new ObservableArrayMap<>();
-        testMap.put("name", "贺大宝，心情不美丽");
-        testMap.put("age", "22的年龄，啧啧");
-        mBinding.setLoveMap(testMap);
+        mBinding.btnChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mMissBean.missWho.set("人生路，路漫漫~");
+                mMissBean.missYou.set("累的时候，抬头看看天空！");
+            }
+        });
 
-        MissBean missBean = new MissBean();
-        missBean.missWho.set("在思念谁？");
-        missBean.missYou.set("在思念你~");
     }
 
     public class Presenter {
@@ -60,6 +60,7 @@ public class ObservableActivity extends AppCompatActivity {
             mLoveBean.setYouSelf("Who are you?" + s);
             mLoveBean.setMySelf("H.L.Q." + s);
             mLoveBean.setIsTrueLove(!mLoveBean.getIsTrueLove().get());
+
         }
 
     }
