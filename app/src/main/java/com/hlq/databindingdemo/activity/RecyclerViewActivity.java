@@ -29,4 +29,5 @@ public class RecyclerViewActivity extends AppCompatActivity {
         }
         binding.setLoveList(loveList);
     }
+
 }

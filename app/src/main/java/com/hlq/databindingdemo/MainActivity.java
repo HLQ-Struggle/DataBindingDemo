@@ -10,6 +10,7 @@ import com.hlq.databindingdemo.activity.BasisUsageActivity;
 import com.hlq.databindingdemo.activity.BindListenerActivity;
 import com.hlq.databindingdemo.activity.ExpressionActivity;
 import com.hlq.databindingdemo.activity.IncludeActivity;
+import com.hlq.databindingdemo.activity.NormalRecyclerViewActivity;
 import com.hlq.databindingdemo.activity.ObservableActivity;
 import com.hlq.databindingdemo.activity.ObservableFieldActivity;
 import com.hlq.databindingdemo.activity.RecyclerViewActivity;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.showLoveHistoryOnClick: // 展示RecyclerView添加点击事件
                     startActivity(new Intent(selfActivity, RecyclerViewActivity.class));
+                    break;
+                case R.id.normalRecyclerView: // 换一种方式实现RecyclerView
+                    startActivity(new Intent(selfActivity, NormalRecyclerViewActivity.class));
                     break;
             }
         }

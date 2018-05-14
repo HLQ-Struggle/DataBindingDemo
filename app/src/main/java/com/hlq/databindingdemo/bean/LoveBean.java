@@ -16,7 +16,7 @@ public class LoveBean extends BaseObservable {
     private String mySelf;
     private ObservableBoolean isTrueLove = new ObservableBoolean();
 
-    public LoveBean(String youSelf, String mySelf, boolean trueLove) {
+    public LoveBean( String youSelf, String mySelf, boolean trueLove) {
         this.youSelf = youSelf;
         this.mySelf = mySelf;
         isTrueLove.set(trueLove);

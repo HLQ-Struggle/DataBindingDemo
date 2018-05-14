@@ -21,7 +21,8 @@
         <activity android:name=".activity.IncludeActivity" />
         <activity android:name=".activity.ObservableActivity" />
         <activity android:name=".activity.RecyclerViewActivity" />
-        <activity android:name=".activity.ObservableFieldActivity"></activity>
+        <activity android:name=".activity.ObservableFieldActivity" />
+        <activity android:name=".activity.NormalRecyclerViewActivity"></activity>
     </application>
 
 </manifest>

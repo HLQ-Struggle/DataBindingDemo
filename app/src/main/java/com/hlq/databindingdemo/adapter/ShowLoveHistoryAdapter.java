@@ -4,6 +4,7 @@ import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.hlq.databindingdemo.R;
@@ -24,6 +25,7 @@ public class ShowLoveHistoryAdapter extends RecyclerView.Adapter<ShowLoveHistory
 
     private Context mContext;
     private List<LoveBean> mLoveList;
+    private OnItemClickListener mOnItemClickListener;
 
     public ShowLoveHistoryAdapter(Context mContext, List<LoveBean> mLoveList) {
         this.mContext = mContext;
@@ -40,15 +42,33 @@ public class ShowLoveHistoryAdapter extends RecyclerView.Adapter<ShowLoveHistory
     }
 
     @Override
-    public void onBindViewHolder(ShowLoveHistoryHolder holder, int position) {
+    public void onBindViewHolder(ShowLoveHistoryHolder holder, final int position) {
         holder.getBinding().setLove(mLoveList.get(position));
         // 立即刷新界面，防止列表更新不及时，导致数据错乱
         holder.getBinding().executePendingBindings();
+        if (mOnItemClickListener != null) {
+            holder.getBinding().icon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mOnItemClickListener.OnItemClickListener(mLoveList.get(position));
+                }
+            });
+        }
     }
 
     @Override
     public int getItemCount() {
         return mLoveList == null ? 0 : mLoveList.size();
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.mOnItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+
+        void OnItemClickListener(LoveBean loveBean);
+
     }
 
 }

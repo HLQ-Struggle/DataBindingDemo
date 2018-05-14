@@ -104,12 +104,21 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/normalRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="@{persenter.onClick}"
+                android:text="进阶用法-老方式实现RecyclerView点击事件"
+                android:textAllCaps="false" />
+
+            <Button
                 android:id="@+id/showLoveHistoryOnClick"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:onClick="@{persenter.onClick}"
-                android:text="进阶用法-RecyclerView点击事件"
+                android:text="进阶用法-来个牛逼点方式实现RecyclerView点击事件"
                 android:textAllCaps="false" />
 
         </LinearLayout>

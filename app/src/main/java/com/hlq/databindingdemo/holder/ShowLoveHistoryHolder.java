@@ -8,7 +8,7 @@ import com.hlq.databindingdemo.databinding.ItemLoveHistoryShowBinding;
  * author : HLQ
  * e-mail : 925954424@qq.com
  * time   : 2018/02/24
- * desc   :
+ * desc   : RecyclerView 所需Holder
  * version: 1.0
  */
 public class ShowLoveHistoryHolder extends RecyclerView.ViewHolder {

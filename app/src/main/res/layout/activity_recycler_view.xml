@@ -12,6 +12,7 @@
         <variable
             name="loveList"
             type="ObservableArrayList&lt;LoveBean>" />
+
     </data>
 
     <LinearLayout

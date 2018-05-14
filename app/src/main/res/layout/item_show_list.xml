@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.hlq.databindingdemo.bean.UserBean" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parent_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_list"
+            style="@style/contentStyle"
+            android:text="@{user.userName}"
+            tools:text="item测试数据" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#fff" />
+
+    </LinearLayout>
+</layout>
