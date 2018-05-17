@@ -9,12 +9,14 @@ import android.view.View;
 import com.hlq.databindingdemo.activity.BasisUsageActivity;
 import com.hlq.databindingdemo.activity.BindListenerActivity;
 import com.hlq.databindingdemo.activity.ExpressionActivity;
+import com.hlq.databindingdemo.activity.ImageViewActivity;
 import com.hlq.databindingdemo.activity.IncludeActivity;
 import com.hlq.databindingdemo.activity.NormalRecyclerViewActivity;
 import com.hlq.databindingdemo.activity.ObservableActivity;
 import com.hlq.databindingdemo.activity.ObservableFieldActivity;
 import com.hlq.databindingdemo.activity.RecyclerViewActivity;
 import com.hlq.databindingdemo.activity.ViewStubActivity;
+import com.hlq.databindingdemo.activity.WordActivity;
 import com.hlq.databindingdemo.databinding.ActivityMainBinding;
 
 /**
@@ -71,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.normalRecyclerView: // 换一种方式实现RecyclerView
                     startActivity(new Intent(selfActivity, NormalRecyclerViewActivity.class));
+                    break;
+                case R.id.imageView: // 当Data Binding遇到ImageView
+                    startActivity(new Intent(selfActivity, ImageViewActivity.class));
+                    break;
+                case R.id.the_word_for_me: // 注解打天下
+                    startActivity(new Intent(selfActivity, WordActivity.class));
                     break;
             }
         }

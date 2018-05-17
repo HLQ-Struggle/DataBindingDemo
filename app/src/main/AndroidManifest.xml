@@ -22,7 +22,9 @@
         <activity android:name=".activity.ObservableActivity" />
         <activity android:name=".activity.RecyclerViewActivity" />
         <activity android:name=".activity.ObservableFieldActivity" />
-        <activity android:name=".activity.NormalRecyclerViewActivity"></activity>
+        <activity android:name=".activity.NormalRecyclerViewActivity" />
+        <activity android:name=".activity.ImageViewActivity" />
+        <activity android:name=".activity.WordActivity"></activity>
     </application>
 
 </manifest>

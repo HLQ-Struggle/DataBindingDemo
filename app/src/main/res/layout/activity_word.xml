@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vv"
+            type="com.hlq.databindingdemo.bean.VVBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.WordActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@{vv.vHeartBg ? @color/c_yellow : @color/c_while}"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="VV内心颜色如同背景色"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@{vv.vDesc}"
+            android:textColor="#000" />
+
+        <com.hlq.databindingdemo.weight.VVBiuView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:padding="15dp"
+            android:text="我是隐藏大招~"
+            app:activation="@{vv.vDesc}"/>
+
+    </LinearLayout>
+</layout>
